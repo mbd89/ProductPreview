@@ -1,0 +1,130 @@
+
+/*
+  Comeau's Reset below 
+*/
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  } 
+
+  * {
+    margin: 0;
+  }
+
+  html, body{
+    height: 100%;
+  }
+ 
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+ 
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  } 
+ 
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+ h1{
+  line-height: 1.1;
+ }
+
+  /*  
+  End of Reset 
+  */
+
+/*
+  Built following the tutorial of Kevin Powell
+*/
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #6C7289;
+    font-size: 0.875rem;
+    background: #F2EAE2;
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+    
+}
+
+.prices{
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+}
+
+.product{
+ background-color: #FFF;
+ border-radius: 0.5rem;
+ overflow: hidden;
+ display: grid;
+ max-width: 600px;
+} 
+@media (min-width : 600Px){
+.product{
+ grid-template-columns: 1fr 1fr;
+}
+
+}
+
+.content{
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.title{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.product-title{
+  color: #1C232B;
+  font-family: Fraunces;
+  font-size: 2rem;
+}
+
+.discount{
+  font-size: 2rem;
+  font-family: Fraunces;
+  font-weight: bold;
+  color: #3D8168;
+}
+
+.button{
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3D8168; 
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+ 
+}
+
+.button:is(:hover, :focus){
+background-color: hsl(158, 36%, 20%);
+
+
+}
+
+.button[data-icon="shopping-cart"]::before{
+content: '';
+background-image: url('images/icon-cart.svg');
+width: 15px;
+height: 16px;
+}
